@@ -1,4 +1,8 @@
 #!/bin/bash
 
-sudo apt update
-sudo apt install ranger
+su
+
+#set hostname
+apt update
+apt install ranger
+apt install sudo
