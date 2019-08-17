@@ -4,4 +4,4 @@ su
 
 #set hostname
 apt update
-apt install ranger sudo net-tools python3-pip
+apt install ranger net-tools python3-pip
