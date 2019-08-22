@@ -6,7 +6,7 @@ read NAME
 
 #install base utilities
 apt update
-apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw openvpn mlocate
+apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw openvpn mlocate vim
 
 #add user to sudo group
 sudo usermod -aG sudo $NAME
