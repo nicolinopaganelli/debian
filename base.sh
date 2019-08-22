@@ -11,9 +11,6 @@ apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw 
 #add user to sudo group
 sudo usermod -aG sudo $NAME
 
-#log into regular user
-su - $NAME
-
 #set up fw
 echo -e "would you like to allow ssh through your firewall?\n(y/n)"
 read fw_answer
