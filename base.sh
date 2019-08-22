@@ -9,7 +9,7 @@ apt update
 apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw openvpn
 
 #add user to sudo group
-usermod -aG sudo $NAME
+sudo usermod -aG sudo $NAME
 
 #log into regular user
 su - $NAME
