@@ -11,6 +11,9 @@ apt install sudo ranger net-tools python3-pip open-ssh ufw openvpn
 #add user to sudo group
 usermod -aG sudo $NAME
 
+#log into regular user
+su - $NAME
+
 #set up fw
 echo -e "would you like to allow ssh through your firewall?\n(y/n)"
 read fw_answer
