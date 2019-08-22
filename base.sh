@@ -4,7 +4,7 @@
 echo "what is your username?"
 read NAME
 
-#set hostname
+#install base utilities
 apt update
 apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw openvpn mlocate
 
