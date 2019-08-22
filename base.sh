@@ -6,7 +6,7 @@ read NAME
 
 #set hostname
 apt update
-apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw openvpn
+apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw openvpn mlocate
 
 #add user to sudo group
 sudo usermod -aG sudo $NAME
@@ -28,5 +28,5 @@ else
 fi
 
 #install easy-rsa
-wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz && cd ~/
+wget -P /home/$NAME/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz && cd /home/$NAME/
 tar xvf EasyRSA-unix-v3.0.6.tgz
