@@ -29,4 +29,5 @@ fi
 
 #install easy-rsa
 wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz
+cd ~/
 tar xvf EasyRSA-unix-v3.0.6.tgz
