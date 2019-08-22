@@ -11,7 +11,7 @@ usermod -aG sudo $NAME
 
 #set hostname
 apt update
-apt install ranger net-tools python3-pip open-ssh ufw
+apt install ranger net-tools python3-pip open-ssh ufw openvpn
 
 #set up fw
 echo -e "would you like to allow ssh through your firewall?\n(y/n)"
@@ -28,4 +28,7 @@ else
   echo "'y' not selected, not allowing ssh"
   sudo ufw enable
 fi
-    
+
+#install easy-rsa
+wget -P ~/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz
+tar xvf EasyRSA-unix-v3.0.6.tgz
