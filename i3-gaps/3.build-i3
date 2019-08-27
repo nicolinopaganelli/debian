@@ -1,0 +1,10 @@
+mkdir ~/i3-gaps_stuffs
+cd ~/i3-gaps_stuffs
+git clone https://www.github.com/Airblader/i3 i3-gaps
+cd i3-gaps
+autoreconf --force --install
+mkdir build
+cd build
+../configure --prefix=/usr --sysconfdir=/etc
+make
+sudo make install
