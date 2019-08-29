@@ -17,14 +17,25 @@ read fw_answer
 if [ "$fw_answer" == "y" ]
 then
   sudo ufw allow OpenSSH
-  sudo ufw enable
+  sudo ufw allow 22
 elif [ "$fw_answer" == "n" ]
 then
   echo "not allowing ssh"
-  sudo ufw enable
 else
   echo "'y' not selected, not allowing ssh"
-  sudo ufw enable
+fi
+
+echo -e "would you like to allow https (port 443) through your firewall?\n(y/n)"
+read fw_answer
+if [ "$fw_answer" == "y" ]
+then
+  sudo ufw allow openvpn
+  sudo ufw allow 443
+elif [ "$fw_answer" == "n" ]
+then
+  echo "not allowing vpn"
+else
+  echo "'y' not selected, not allowing vpn"
 fi
 
 #install easy-rsa
