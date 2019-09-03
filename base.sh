@@ -38,6 +38,8 @@ else
   echo "'y' not selected, not allowing vpn"
 fi
 
+sudo ufw enable
+
 #install easy-rsa
 wget -P /home/$NAME/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz && cd /home/$NAME/
 tar xvf EasyRSA-unix-v3.0.6.tgz
