@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #set up fw
 echo -e "would you like to allow ssh through your firewall?\n(y/n)"
 read fw_answer
