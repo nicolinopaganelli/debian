@@ -11,34 +11,6 @@ apt install sudo ranger net-tools python3-pip openssh-server openssh-client ufw 
 #add user to sudo group
 sudo usermod -aG sudo $NAME
 
-#set up fw
-echo -e "would you like to allow ssh through your firewall?\n(y/n)"
-read fw_answer
-if [ "$fw_answer" == "y" ]
-then
-  sudo ufw allow OpenSSH
-elif [ "$fw_answer" == "n" ]
-then
-  echo "not allowing ssh"
-else
-  echo "'y' not selected, not allowing ssh"
-fi
-
-echo -e "would you like to allow https (port 443) through your firewall?\n(y/n)"
-read fw_answer
-if [ "$fw_answer" == "y" ]
-then
-  sudo ufw allow 443/tcp
-elif [ "$fw_answer" == "n" ]
-then
-  echo "not allowing https"
-else
-  echo "'y' not selected, not allowing https"
-fi
-
-sudo ufw disable
-sudo ufw enable
-
 #install easy-rsa
 wget -P /home/$NAME/ https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz && cd /home/$NAME/
 tar xvf EasyRSA-unix-v3.0.6.tgz
